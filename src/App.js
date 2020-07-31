@@ -1,26 +1,26 @@
-import React from 'react';
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import ListPatientComponent from "./components/ListPatient";
+import AddPatientComponent from "./components/AddPatient";
+import EditPatientComponent from "./components/EditPatient";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App">
+        <Router>
+          <Header />
+          <Switch>
+            <Route path="/" exact component={ListPatientComponent} />
+            <Route path="/patients" component={ListPatientComponent} />
+            <Route path="/add-patient" component={AddPatientComponent} />
+            <Route path="/edit-patient" component={EditPatientComponent} />
+          </Switch>
+          <Footer />
+        </Router>
+      </div>
   );
 }
-
-export default App;

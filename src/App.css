@@ -36,3 +36,19 @@
     transform: rotate(360deg);
   }
 }
+
+.MuiTable-root{
+  width: 75% !important;
+  margin: 2rem auto;
+}
+
+form{
+  margin: 1rem auto;
+  width: 50%;
+}
+.MuiTypography-h4{
+  padding: 1rem 0;
+}
+.MuiButton-containedPrimary{
+  margin-right: 10px !important;
+}
