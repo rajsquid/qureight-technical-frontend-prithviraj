@@ -8,9 +8,9 @@ class ApiService {
         return axios.get(USER_API_BASE_URL + urlParam);
     }
 
-/*    fetchUserById(userId) {
+    fetchPatientById(userId) {
         return axios.get(USER_API_BASE_URL + "/" + userId);
-    }*/
+    }
 
     deletePatient(patientId) {
         return axios.delete(USER_API_BASE_URL + "/" + patientId);

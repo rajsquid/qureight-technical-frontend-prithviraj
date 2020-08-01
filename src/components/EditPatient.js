@@ -28,7 +28,7 @@ class EditPatientComponent extends Component {
     }
 
     loadPatient() {
-        ApiService.fetchUserById(window.localStorage.getItem("patientDocId")).then(
+        ApiService.fetchPatientById(window.localStorage.getItem("patientDocId")).then(
             res => {
                 let patient = res.data.items;
                 this.setState({
